@@ -28,6 +28,11 @@
     </properties>
 
     <dependencies>
+        <!-- 引入 Web 功能 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <!-- lombok 工具通过在代码编译时期动态的将注解替换为具体的代码,
         IDEA 需要添加 lombok 插件 -->
         <dependency>
