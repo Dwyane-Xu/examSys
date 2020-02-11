@@ -4,22 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <modules>
-        <module>user-service</module>
-        <module>exam-service</module>
-        <module>auth-service</module>
-    </modules>
-
     <parent>
         <groupId>com.github.dwyane</groupId>
         <artifactId>examSys</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>function-service</artifactId>
+    <artifactId>gateway-service</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    <packaging>pom</packaging>
 
     <dependencies>
         <dependency>
@@ -27,13 +19,10 @@
             <artifactId>common-service</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <!--
-            Eureka 客户端, 客户端向 Eureka Server 注册的时候会提供一系列的元数据信息, 例如: 主机, 端口, 健康检查url等
-            Eureka Server 接受每个客户端发送的心跳信息, 如果在某个配置的超时时间内未接收到心跳信息, 实例会被从注册列表中移除
-        -->
+        <!-- gateway -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
     </dependencies>
 

@@ -11,6 +11,7 @@
     <modules>
         <module>config-service</module>
         <module>eureka-service</module>
+        <module>gateway-service</module>
         <module>common-service</module>
         <module>function-service</module>
     </modules>

@@ -8,10 +8,10 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/Dwyane-Xu/examSys.git
+          uri: https://github.com/Dwyane-Xu/config-repo
           username: 502794297@qq.com
           password: hxfs43j8740
-#          basedir: /Users/admin/code/myProjects/java/imooc/SpringCloud_Sell/config/basedir
+#          basedir: /Users/xujinzhao/许锦钊/项目/毕业设计/examSys/config-service/src/main/resources/config
 eureka:
   client:
     service-url:

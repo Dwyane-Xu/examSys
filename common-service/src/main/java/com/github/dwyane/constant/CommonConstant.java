@@ -9,6 +9,16 @@ package com.github.dwyane.constant;
 public class CommonConstant {
 
     /**
+     * 密码类型
+     */
+    public static final String GRANT_TYPE_PASSWORD = "password";
+
+    /**
+     * 手机号类型
+     */
+    public static final String GRANT_TYPE_MOBILE = "mobile";
+
+    /**
      * 顶级菜单的parentId
      */
     public static final Long ROOT = -1L;
