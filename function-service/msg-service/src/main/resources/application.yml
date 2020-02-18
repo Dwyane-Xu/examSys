@@ -1,0 +1,65 @@
+server:
+  port: 8084
+  servlet:
+    context-path: /msg
+
+spring:
+  application:
+    name: msg-service
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate.format_sql: true
+    open-in-view: false
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/examSys?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: Hxfs43j8740@
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    tomcat:
+      max-active: 4
+      min-idle: 2
+      initial-size: 2
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/
+
+# 短信配置
+sms:
+  appKey: LTAI4FptwU6UCQedWEF6p2JK
+  appSecret: EiXpYUTtFjPdTFCJNH7zDbM9DXtBy4
+  regionId: cn-shenzhen
+  domain: dysmsapi.aliyuncs.com
+  signName: 在线考试云平台
+  templateCode: SMS_183242703
+  version: 2017-05-25
+  action: SendSms
+
+# feign配置
+feign:
+  #  httpclient:
+  #    enabled: false
+  #  okhttp:
+  #    enabled: true
+  hystrix:
+    enabled:  true
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+
+# hystrix配置
+hystrix:
+  shareSecurityContext: true
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000

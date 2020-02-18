@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    name: exam-service
+    name: user-service
   jpa:
     show-sql: true
     hibernate:
@@ -27,3 +27,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:8000/eureka/
+
+# 系统配置
+sys:
+  adminUser: admin  # 管理员账号，默认是admin
+  key: '1234567887654321'
+  cacheExpire: 86400 # 缓存失效时间，单位秒，默认一天

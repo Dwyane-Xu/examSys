@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 /**
@@ -31,6 +32,7 @@ public class Dept {
     /**
      * 部门名称
      */
+    @NotBlank(message = "部门名称不能为空")
     private String deptName;
 
     /**
@@ -51,6 +53,7 @@ public class Dept {
     /**
      * 排序号
      */
+    @NotBlank(message = "排序号不能为空")
     private Integer sort;
 
     /**

@@ -2,6 +2,7 @@ package com.github.dwyane;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @ClassNanme: AuthApplication
@@ -9,6 +10,7 @@ import org.springframework.cloud.client.SpringCloudApplication;
  * @Author: xujinzhao
  * @Date: 2020/2/11 17:04
  */
+//@EnableFeignClients(basePackages = "com.github.dwyane.client")
 @SpringCloudApplication
 public class AuthApplication {
 

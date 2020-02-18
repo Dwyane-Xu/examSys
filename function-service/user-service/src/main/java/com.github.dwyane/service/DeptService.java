@@ -15,7 +15,7 @@ public interface DeptService {
 
     Dept findById(Long id);
 
-    List<DeptDto> findList();
+    List<DeptDto> findTreeList();
 
     Dept save(Dept dept);
 

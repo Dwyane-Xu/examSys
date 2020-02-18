@@ -3,11 +3,24 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-service/common-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-service/common-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-service/common-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-service/common-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-service/common-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-service/common-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-service/common-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-service/common-log" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-service/common-log" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-service/common-security" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-service/common-security" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/function-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/function-service/auth-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/function-service/exam-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/function-service/msg-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/function-service/user-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway-service" charset="UTF-8" />
   </component>

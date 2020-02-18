@@ -7,11 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="auth-service" />
-        <module name="common-service" />
+        <module name="common-config" />
+        <module name="common-core" />
+        <module name="common-feign" />
+        <module name="common-log" />
+        <module name="common-security" />
         <module name="config-service" />
         <module name="eureka-service" />
         <module name="exam-service" />
         <module name="gateway-service" />
+        <module name="msg-service" />
         <module name="user-service" />
       </profile>
     </annotationProcessing>

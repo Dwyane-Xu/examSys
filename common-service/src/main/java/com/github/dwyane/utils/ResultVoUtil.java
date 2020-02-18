@@ -44,4 +44,8 @@ public class ResultVoUtil {
         resultVO.setMsg(resultEnum.getMessage());
         return resultVO;
     }
+
+    public static boolean isSuccess(ResultVo<?> resultVo) {
+        return resultVo != null && resultVo.getCode().equals(ResultEnum.SUCCESS.getCode());
+    }
 }

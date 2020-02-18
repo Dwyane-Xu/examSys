@@ -8,6 +8,7 @@
         <module>user-service</module>
         <module>exam-service</module>
         <module>auth-service</module>
+        <module>msg-service</module>
     </modules>
 
     <parent>

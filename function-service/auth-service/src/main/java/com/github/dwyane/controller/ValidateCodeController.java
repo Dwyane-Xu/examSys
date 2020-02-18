@@ -1,8 +1,11 @@
 package com.github.dwyane.controller;
 
-import com.github.dwyane.enums.LoginTypeEnum;
+import com.github.dwyane.constant.RedisKeyConstant;
+import com.github.dwyane.constant.RedisTimeConstant;
+import com.github.dwyane.exception.CommonException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -46,10 +49,15 @@ public class ValidateCodeController {
         // 生成图片验证码
         BufferedImage imageCode = kaptchaProducer.createImage(text);
 
-
-        redisTemplate.opsForValue().set(CommonConstant.DEFAULT_CODE_KEY + LoginTypeEnum.PWD.getType() + "@" + random, imageCode, SecurityConstant.DEFAULT_IMAGE_EXPIRE, TimeUnit.SECONDS);
+        redisTemplate.opsForValue().set(RedisKeyConstant.USER_KAPTCHA + random, text,
+                RedisTimeConstant.USER_IMAGE_KAPTCHA, TimeUnit.SECONDS);
 
         ServletOutputStream out = response.getOutputStream();
-        ImageIO.write(image, "JPEG", out);
+        ImageIO.write(imageCode, "JPEG", out);
+    }
+
+    @GetMapping
+    public String test() {
+        throw new CommonException("test");
     }
 }

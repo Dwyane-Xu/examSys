@@ -25,26 +25,51 @@
     </parent>
 
     <properties>
+        <revision>1.0-SNAPSHOT</revision>
+        <spring-boot.version>2.1.1.RELEASE</spring-boot.version>
         <spring-cloud.version>Greenwich.SR5</spring-cloud.version>
+        <mysql.connector.version>8.0.12</mysql.connector.version>
+        <kaptcha.version>0.0.9</kaptcha.version>
+        <easyexcel.version>2.1.4</easyexcel.version>
+
+        <!-- common -->
+        <commons-io.version>2.6</commons-io.version>
+        <commons-collections4.version>4.1</commons-collections4.version>
+        <commons-beanutils.version>1.9.2</commons-beanutils.version>
+
+        <hibernate-validator.version>6.0.14.Final</hibernate-validator.version>
+        <hutool.version>4.5.0</hutool.version>
     </properties>
 
     <dependencies>
-        <!-- 引入 Web 功能 -->
+        <!-- 引入服务容错 Hystrix 的依赖 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+        <!-- MySQL 驱动, 注意, 这个需要与 MySQL 版本对应 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.12</version>
+            <scope>runtime</scope>
         </dependency>
         <!-- lombok 工具通过在代码编译时期动态的将注解替换为具体的代码,
         IDEA 需要添加 lombok 插件 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.18</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <!-- Java Persistence API, ORM 规范 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
     </dependencies>
 
@@ -52,12 +77,110 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!--SpringBoot-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+            </dependency>
+
+            <!-- common-core -->
+            <dependency>
+                <groupId>com.github.dwyane</groupId>
+                <artifactId>common-core</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- common-config -->
+            <dependency>
+                <groupId>com.github.dwyane</groupId>
+                <artifactId>common-config</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- common-security -->
+            <dependency>
+                <groupId>com.github.dwyane</groupId>
+                <artifactId>common-security</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- common-feign -->
+            <dependency>
+                <groupId>com.github.dwyane</groupId>
+                <artifactId>common-feign</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- common-log -->
+            <dependency>
+                <groupId>com.github.dwyane</groupId>
+                <artifactId>common-log</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- user-service -->
+            <dependency>
+                <groupId>com.github.dwyane</groupId>
+                <artifactId>user-service</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- auth-service -->
+            <dependency>
+                <groupId>com.github.dwyane</groupId>
+                <artifactId>auth-service</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- exam-service -->
+            <dependency>
+                <groupId>com.github.dwyane</groupId>
+                <artifactId>exam-service</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- msc-service -->
+            <dependency>
+                <groupId>com.github.dwyane</groupId>
+                <artifactId>msc-service</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!--MySQL-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+            </dependency>
+
+            <!-- 验证码 -->
+            <dependency>
+                <groupId>com.github.axet</groupId>
+                <artifactId>kaptcha</artifactId>
+                <version>${kaptcha.version}</version>
+            </dependency>
+
+            <!-- easyexcel -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexcel.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

@@ -38,7 +38,7 @@ public class DeptServiceImpl implements DeptService {
     }
 
     @Override
-    public List<DeptDto> findList() {
+    public List<DeptDto> findTreeList() {
         List<Dept> deptList = deptRepository.findAll();
         if (!CollectionUtils.isEmpty(deptList)) {
             List<DeptDto> deptDtoList = deptList.stream().map(DeptDto::new).collect(Collectors.toList());

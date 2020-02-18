@@ -9,10 +9,12 @@ import lombok.Getter;
  * @Date: 2020/2/7 01:53
  */
 @Getter
-public enum  ResultEnum {
+public enum ResultEnum {
 
-    SUCCESS(0, "成功"),
-    PARAM_ERROR(1, "参数不正确"),
+    SUCCESS(200, "成功"),
+    PARAM_ERROR(100, "参数不正确"),
+    VALIDATE_CODE_ERROR(101, "验证码错误"),
+    SERVICE_ERROR(500, "服务错误"),
     ;
 
     private Integer code;

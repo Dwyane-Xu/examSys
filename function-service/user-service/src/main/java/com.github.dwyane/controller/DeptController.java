@@ -38,7 +38,7 @@ public class DeptController {
      * @date 2020/2/7 上午1:40
      */
     @GetMapping("/{id}")
-    public ResultVo<Dept> get(@PathVariable Long id) {
+    public ResultVo<Dept> findById(@PathVariable Long id) {
         return ResultVoUtil.success(deptService.findById(id));
     }
 
@@ -48,8 +48,8 @@ public class DeptController {
      * @date 2020/2/6 下午11:49
      */
     @GetMapping("/list")
-    public ResultVo<Dept> list() {
-        return ResultVoUtil.success(deptService.findList());
+    public ResultVo<Dept> findTreeList() {
+        return ResultVoUtil.success(deptService.findTreeList());
     }
 
     /**

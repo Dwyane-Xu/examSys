@@ -8,8 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.Assert.*;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class RoleServiceImplTest {
@@ -38,6 +36,7 @@ public class RoleServiceImplTest {
 
     @Test
     public void deleteById() {
+        roleService.deleteById(5L);
     }
 
     @Test
