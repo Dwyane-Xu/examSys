@@ -57,7 +57,7 @@ public class MenuController {
 
     @PutMapping
     public ResponseBean<Boolean> update(@RequestBody @Valid Menu menu) {
-
+        return null;
     }
 
     @DeleteMapping("/{id}")

@@ -20,4 +20,8 @@ public interface RoleRepository extends JpaRepository<Role, Long> {
     @Transactional
     @Query("delete from Role r where r.id in (?1)")
     void deleteByIds(List<Long> ids);
+
+    List<Role> findByIdIn(List<Long> ids);
+
+    List<Role> findByIsDefault(Integer isDefault);
 }

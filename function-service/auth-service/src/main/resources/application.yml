@@ -55,3 +55,41 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 60000
+
+ignore:
+  urls:
+  - /
+  - /error
+  - /favicon.ico
+  - /**/*swagger*/**
+  - /v2/api-docs
+  - /csrf
+  - /actuator/**
+  - /hystrix.sender
+  - /v1/sms/**
+  - /v1/user/findUserByIdentifier/**
+  - /v1/tenant/findTenantByTenantCode/**
+  - /v1/user/checkExist/**
+  - /v1/user/updatePassword
+  - /v1/menu/findMenuByRole/**
+  - /v1/menu/findAllMenu
+  - /v1/code/**
+  - /v1/attachment/download
+  - /v1/log/**
+  - /authentication/**
+  - /v1/authentication/**
+  - /**/*.css
+  - /**/*.js
+  - /social
+  - /signin
+  - /signup
+  - /info
+  - /health
+  - /metrics/**
+  - /loggers/**
+
+# 系统配置
+sys:
+  adminUser: admin  # 管理员账号，默认是admin
+  key: '1234567887654321'
+  cacheExpire: 86400 # 缓存失效时间，单位秒，默认一天

@@ -1,5 +1,6 @@
 package com.github.dwyane.service;
 
+import com.github.dwyane.entity.Menu;
 import com.github.dwyane.entity.RoleMenu;
 
 import java.util.List;

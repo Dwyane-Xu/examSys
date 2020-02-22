@@ -14,4 +14,6 @@ import java.util.List;
 public interface RoleMenuRepository extends JpaRepository<RoleMenu, Long> {
 
     List<RoleMenu> findByMenuIdIn(List<Long> menuIds);
+
+    List<RoleMenu> findByRoleIdIn(List<Long> roleIds);
 }

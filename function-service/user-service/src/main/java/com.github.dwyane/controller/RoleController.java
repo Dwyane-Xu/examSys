@@ -1,15 +1,10 @@
 package com.github.dwyane.controller;
 
-import com.github.dwyane.constant.ApiMsg;
 import com.github.dwyane.constant.CommonConstant;
 import com.github.dwyane.entity.Role;
-import com.github.dwyane.enums.ResultEnum;
 import com.github.dwyane.service.RoleService;
 import com.github.dwyane.utils.PageUtil;
-import com.github.dwyane.utils.ResultVoUtil;
 import com.github.dwyane.vo.ResponseBean;
-import com.github.dwyane.vo.ResultVo;
-import org.apache.commons.lang.ArrayUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -71,12 +66,13 @@ public class RoleController {
      */
     @PostMapping
     public ResponseBean<String> save(@RequestBody @Valid Role role) {
-        try {
-            roleService.save(role);
-            return new ResponseBean<>();
-        } catch (Exception e) {
-            return new ResponseBean<>(e.getMessage(), ApiMsg.);
-        }
+        return null;
+//        try {
+//            roleService.save(role);
+//            return new ResponseBean<>();
+//        } catch (Exception e) {
+//            return new ResponseBean<>(e.getMessage(), ApiMsg.);
+//        }
     }
 
     /**
@@ -101,16 +97,17 @@ public class RoleController {
      */
     @DeleteMapping
     public ResponseBean<String> deleteList(@RequestBody Long[] ids) {
-        try {
-            if (ArrayUtils.isNotEmpty(ids)) {
-                roleService.deleteList(ids);
-                return new ResponseBean<>();
-            } else {
-                return new ResponseBean<>(, , )
-            }
-        } catch (Exception e) {
-
-        }
+        return null;
+//        try {
+//            if (ArrayUtils.isNotEmpty(ids)) {
+//                roleService.deleteList(ids);
+//                return new ResponseBean<>();
+//            } else {
+//                return new ResponseBean<>(, , )
+//            }
+//        } catch (Exception e) {
+//
+//        }
     }
 
     @PutMapping("/{roleId}/{menuIds}")

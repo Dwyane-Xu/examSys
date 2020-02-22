@@ -39,10 +39,10 @@
         </dependency>
 
         <!-- common-log -->
-        <dependency>
-            <groupId>com.github.dwyane</groupId>
-            <artifactId>common-log</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.github.dwyane</groupId>-->
+            <!--<artifactId>common-log</artifactId>-->
+        <!--</dependency>-->
 
     </dependencies>
 

@@ -22,7 +22,7 @@ import java.util.Date;
 @DynamicInsert
 @DynamicUpdate
 @Data
-@Table(name = "user_log")
+@Table(name = "sys_log")
 public class Log {
 
     @Id

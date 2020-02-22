@@ -23,7 +23,7 @@ import java.util.Date;
 @DynamicInsert
 @DynamicUpdate
 @Data
-@Table(name = "user_menu")
+@Table(name = "sys_menu")
 public class Menu {
 
     @Id
@@ -92,10 +92,10 @@ public class Menu {
     /**
      * 创建日期
      */
-    protected Date createDate;
+    private Date createDate;
 
     /**
      * 更新日期
      */
-    protected Date modifyDate;
+    private Date modifyDate;
 }

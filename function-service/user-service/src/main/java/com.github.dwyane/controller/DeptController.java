@@ -1,9 +1,8 @@
 package com.github.dwyane.controller;
 
-import com.github.dwyane.vo.ResultVo;
 import com.github.dwyane.entity.Dept;
 import com.github.dwyane.service.DeptService;
-import com.github.dwyane.utils.ResultVoUtil;
+import com.github.dwyane.vo.ResponseBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -38,8 +37,9 @@ public class DeptController {
      * @date 2020/2/7 上午1:40
      */
     @GetMapping("/{id}")
-    public ResultVo<Dept> findById(@PathVariable Long id) {
-        return ResultVoUtil.success(deptService.findById(id));
+    public ResponseBean<Dept> findById(@PathVariable Long id) {
+//        return ResultVoUtil.success(deptService.findById(id));
+        return null;
     }
 
     /**
@@ -48,8 +48,9 @@ public class DeptController {
      * @date 2020/2/6 下午11:49
      */
     @GetMapping("/list")
-    public ResultVo<Dept> findTreeList() {
-        return ResultVoUtil.success(deptService.findTreeList());
+    public ResponseBean<Dept> findTreeList() {
+//        return ResultVoUtil.success(deptService.findTreeList());
+        return null;
     }
 
     /**
@@ -58,9 +59,10 @@ public class DeptController {
      * @date 2020/2/7 上午1:57
      */
     @PostMapping
-    public ResultVo save(@RequestBody @Valid Dept dept) {
-        deptService.save(dept);
-        return ResultVoUtil.success();
+    public ResponseBean save(@RequestBody @Valid Dept dept) {
+//        deptService.save(dept);
+//        return ResultVoUtil.success();
+        return null;
     }
 
     /**
@@ -69,8 +71,9 @@ public class DeptController {
      * @date 2020/2/7 下午5:39
      */
     @DeleteMapping("/{id}")
-    public ResultVo delete(@PathVariable Long id) {
-        deptService.deleteById(id);
-        return ResultVoUtil.success();
+    public ResponseBean delete(@PathVariable Long id) {
+//        deptService.deleteById(id);
+//        return ResultVoUtil.success();
+        return null;
     }
 }

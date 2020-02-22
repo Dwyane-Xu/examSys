@@ -21,7 +21,7 @@ import java.util.Date;
 @DynamicInsert
 @DynamicUpdate
 @Data
-@Table(name = "user_role_menu")
+@Table(name = "sys_role_menu")
 public class RoleMenu {
 
     @Id
@@ -41,10 +41,10 @@ public class RoleMenu {
     /**
      * 创建日期
      */
-    protected Date createDate;
+    private Date createDate;
 
     /**
      * 更新日期
      */
-    protected Date modifyDate;
+    private Date modifyDate;
 }

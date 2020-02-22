@@ -27,15 +27,15 @@
         </dependency>
 
         <!-- user-api -->
-        <dependency>
-            <groupId>com.github.dwyane</groupId>
-            <artifactId>user-service</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.github.dwyane</groupId>-->
+            <!--<artifactId>user-service</artifactId>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-dependencies</artifactId>
-            <version>2.1.1.RELEASE</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-dependencies</artifactId>-->
+            <!--<version>${spring-boot.version}</version>-->
+        <!--</dependency>-->
     </dependencies>
 </project>

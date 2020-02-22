@@ -3,11 +3,16 @@ package com.github.dwyane.util;
 import cn.hutool.core.util.URLUtil;
 import cn.hutool.extra.servlet.ServletUtil;
 import cn.hutool.http.HttpUtil;
-import com.github.dwyane.constant.CommonConstant;
 import com.github.dwyane.entity.Log;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Objects;
+
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.provider.OAuth2Authentication;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 /**
  * @ClassNanme: LogUtil

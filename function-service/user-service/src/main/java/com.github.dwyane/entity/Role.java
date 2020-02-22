@@ -22,7 +22,7 @@ import java.util.Date;
 @DynamicInsert
 @DynamicUpdate
 @Data
-@Table(name = "user_role")
+@Table(name = "sys_role")
 public class Role {
 
     @Id
@@ -54,10 +54,15 @@ public class Role {
     /**
      * 创建日期
      */
-    protected Date createDate;
+    private Date createDate;
 
     /**
      * 更新日期
      */
-    protected Date modifyDate;
+    private Date modifyDate;
+
+    /**
+     * 是否默认，0-否 1-是
+     */
+    private Integer isDefault;
 }

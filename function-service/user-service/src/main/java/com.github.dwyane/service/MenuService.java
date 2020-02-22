@@ -2,6 +2,7 @@ package com.github.dwyane.service;
 
 import com.github.dwyane.dto.MenuDto;
 import com.github.dwyane.entity.Menu;
+import com.github.dwyane.entity.Role;
 
 import java.util.List;
 
@@ -24,4 +25,9 @@ public interface MenuService {
     Menu update(Menu menu);
 
     void deleteById(Long id);
+
+    /**
+     * 获取角色们的所有菜单
+     */
+    List<Menu> findListByRoleIds(List<Long> roleIds);
 }

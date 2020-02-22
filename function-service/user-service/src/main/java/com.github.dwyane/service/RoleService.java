@@ -4,6 +4,8 @@ import com.github.dwyane.entity.Role;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 /**
  * @ClassNanme: RoleService
  * @Description: 角色service
@@ -21,4 +23,9 @@ public interface RoleService {
     void deleteById(Long id);
 
     void deleteList(Long[] ids);
+
+    /**
+     * 根据用户id获取用户的角色
+     */
+    List<Role> findListByUserId(Long userId);
 }

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @ClassNanme: MsgServiceClientFallbackFactory
- * @Description: msg-ervice client fallback factory
+ * @Description: 消息断路器工厂
  * @Author: xujinzhao
  * @Date: 2020/2/12 22:56
  */

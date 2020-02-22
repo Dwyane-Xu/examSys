@@ -4,8 +4,9 @@ import cn.hutool.core.collection.CollUtil;
 import com.github.dwyane.constant.CommonConstant;
 import com.github.dwyane.dto.MenuDto;
 import com.github.dwyane.entity.Menu;
-import com.github.dwyane.properties.SysProperties;
+import com.github.dwyane.entity.RoleMenu;
 import com.github.dwyane.repository.MenuRepository;
+import com.github.dwyane.repository.RoleMenuRepository;
 import com.github.dwyane.service.MenuService;
 import com.github.dwyane.utils.TreeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,12 +29,12 @@ public class MenuServiceImpl implements MenuService {
 
     private final MenuRepository menuRepository;
 
-    private final SysProperties sysProperties;
+    private final RoleMenuRepository roleMenuRepository;
 
     @Autowired
-    public MenuServiceImpl(MenuRepository menuRepository, SysProperties sysProperties) {
+    public MenuServiceImpl(MenuRepository menuRepository, RoleMenuRepository roleMenuRepository) {
         this.menuRepository = menuRepository;
-        this.sysProperties = sysProperties;
+        this.roleMenuRepository = roleMenuRepository;
     }
 
     @Override
@@ -73,5 +74,16 @@ public class MenuServiceImpl implements MenuService {
     @Override
     public void deleteById(Long id) {
         menuRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Menu> findListByRoleIds(List<Long> roleIds) {
+        List<Menu> menuList = new ArrayList<>();
+        List<RoleMenu> roleMenuList = roleMenuRepository.findByRoleIdIn(roleIds);
+        if (!CollectionUtils.isEmpty(roleMenuList)) {
+            menuList = menuRepository.findByIdIn(
+                    roleMenuList.stream().map(RoleMenu::getMenuId).distinct().collect(Collectors.toList()));
+        }
+        return menuList;
     }
 }
