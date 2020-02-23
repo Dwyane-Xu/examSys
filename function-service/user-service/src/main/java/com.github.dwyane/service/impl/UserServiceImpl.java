@@ -107,18 +107,18 @@ public class UserServiceImpl implements UserService {
         UserInfo userInfo = new UserInfo();
         BeanUtils.copyProperties(userDto, userInfo);
         UserInfo userInfoResult = userInfoRepository.save(userInfo);
+        userInfoResult = null;
         if (userInfoResult == null) {
-            log.error("save userInfo fail.");
-            return false;
+            throw new CommonException("123");
         }
 
         // 保存用户与角色的映射信息
-        userDto.getRole().forEach(roleId -> {
-            UserRole userRole = new UserRole();
-            userRole.setUserId(userInfoResult.getId());
-            userRole.setRoleId(roleId);
-            userRoleRepository.save(userRole);
-        });
+//        userDto.getRole().forEach(roleId -> {
+//            UserRole userRole = new UserRole();
+//            userRole.setUserId(userInfoResult.getId());
+//            userRole.setRoleId(roleId);
+//            userRoleRepository.save(userRole);
+//        });
 
         // 保存用户授权信息
         UserAuth userAuth = new UserAuth();

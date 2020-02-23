@@ -33,10 +33,10 @@
         </dependency>
 
         <!-- common-security -->
-        <dependency>
-            <groupId>com.github.dwyane</groupId>
-            <artifactId>common-security</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.github.dwyane</groupId>-->
+            <!--<artifactId>common-security</artifactId>-->
+        <!--</dependency>-->
 
         <!-- common-log -->
         <!--<dependency>-->
