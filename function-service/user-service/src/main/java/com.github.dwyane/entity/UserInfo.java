@@ -47,6 +47,7 @@ public class UserInfo {
      */
     private Long avatarId;
 
+
     /**
      * 邮箱
      */
