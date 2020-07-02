@@ -28,7 +28,7 @@
         <revision>1.0-SNAPSHOT</revision>
         <spring-boot.version>2.1.11.RELEASE</spring-boot.version>
         <spring-cloud.version>Greenwich.SR5</spring-cloud.version>
-        <mysql.connector.version>8.0.12</mysql.connector.version>
+        <mysql.connector.version>8.0.16</mysql.connector.version>
         <kaptcha.version>0.0.9</kaptcha.version>
         <easyexcel.version>2.1.4</easyexcel.version>
 
@@ -52,7 +52,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.12</version>
+            <version>8.0.16</version>
             <scope>runtime</scope>
         </dependency>
         <!-- lombok 工具通过在代码编译时期动态的将注解替换为具体的代码,
